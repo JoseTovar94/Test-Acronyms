@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search-->
+        <scene sceneID="bOv-Vc-jn7">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" id="b10-ZK-gwS" customClass="SearchViewController" customModule="Acronyms" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wv3-vE-5xb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dei-e3-OC2">
+                                <rect key="frame" x="0.0" y="154" width="414" height="708"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="b10-ZK-gwS" id="Jv9-FK-Ksv"/>
+                                    <outlet property="delegate" destination="b10-ZK-gwS" id="1Nt-K9-dTW"/>
+                                </connections>
+                            </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_list" translatesAutoresizingMaskIntoConstraints="NO" id="zh4-Vy-V2U">
+                                <rect key="frame" x="95.5" y="387.5" width="223" height="175"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="223" id="80O-Ff-eUn"/>
+                                    <constraint firstAttribute="height" constant="175" id="uGz-o0-88z"/>
+                                </constraints>
+                            </imageView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="jqR-v4-DFv">
+                                <rect key="frame" x="0.0" y="98" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorry, no search result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9u-Nx-xDw">
+                                <rect key="frame" x="122" y="572.5" width="170.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="acronymsPrimary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KCV-CU-FhK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jqR-v4-DFv" firstAttribute="trailing" secondItem="KCV-CU-FhK" secondAttribute="trailing" id="0y1-b2-X1y"/>
+                            <constraint firstItem="Dei-e3-OC2" firstAttribute="leading" secondItem="KCV-CU-FhK" secondAttribute="leading" id="Hjh-Pr-z6H"/>
+                            <constraint firstItem="zh4-Vy-V2U" firstAttribute="centerY" secondItem="KCV-CU-FhK" secondAttribute="centerY" id="MTp-B5-dJn"/>
+                            <constraint firstItem="d9u-Nx-xDw" firstAttribute="centerX" secondItem="KCV-CU-FhK" secondAttribute="centerX" id="SAl-cf-GvG"/>
+                            <constraint firstItem="Dei-e3-OC2" firstAttribute="top" secondItem="jqR-v4-DFv" secondAttribute="bottom" id="Tmc-jL-QLJ"/>
+                            <constraint firstItem="KCV-CU-FhK" firstAttribute="trailing" secondItem="Dei-e3-OC2" secondAttribute="trailing" id="Y6w-HP-TrP"/>
+                            <constraint firstItem="jqR-v4-DFv" firstAttribute="top" secondItem="KCV-CU-FhK" secondAttribute="top" constant="10" id="ZNX-oM-5Ce"/>
+                            <constraint firstItem="jqR-v4-DFv" firstAttribute="leading" secondItem="KCV-CU-FhK" secondAttribute="leading" id="dzv-un-Uhh"/>
+                            <constraint firstItem="d9u-Nx-xDw" firstAttribute="top" secondItem="zh4-Vy-V2U" secondAttribute="bottom" constant="10" id="ivJ-hC-tL1"/>
+                            <constraint firstItem="KCV-CU-FhK" firstAttribute="bottom" secondItem="Dei-e3-OC2" secondAttribute="bottom" id="lCC-AC-FVA"/>
+                            <constraint firstItem="zh4-Vy-V2U" firstAttribute="centerX" secondItem="KCV-CU-FhK" secondAttribute="centerX" id="xmv-3d-2jS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search" id="oJu-uy-hpi"/>
+                    <connections>
+                        <outlet property="emptyImage" destination="zh4-Vy-V2U" id="zNs-Zg-COL"/>
+                        <outlet property="emptyLabel" destination="d9u-Nx-xDw" id="VZR-8K-sWZ"/>
+                        <outlet property="searchBar" destination="jqR-v4-DFv" id="lK5-hK-56u"/>
+                        <outlet property="tableView" destination="Dei-e3-OC2" id="UEs-rI-nNJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qFy-5T-Agy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1771.0144927536232" y="99.776785714285708"/>
+        </scene>
+        <!--Search Navigation Controller-->
+        <scene sceneID="JHd-Fm-BJR">
+            <objects>
+                <navigationController storyboardIdentifier="SearchNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="T83-yr-aBe" customClass="SearchNavigationController" customModule="Acronyms" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cyG-aB-WpX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="acronymsSurface"/>
+                        <color key="barTintColor" name="acronymsPrimary"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="acronymsSurface"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="b10-ZK-gwS" kind="relationship" relationship="rootViewController" id="itB-HU-qto"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="43a-B7-Sa3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="860.86956521739137" y="99.776785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="empty_list" width="188" height="181"/>
+        <namedColor name="acronymsPrimary">
+            <color red="0.38431372549019605" green="0.0" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="acronymsSurface">
+            <color red="0.98000001907348633" green="0.98000001907348633" blue="0.98000001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

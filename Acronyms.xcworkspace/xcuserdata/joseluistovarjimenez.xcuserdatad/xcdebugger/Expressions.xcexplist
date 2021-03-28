@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "SearchViewController.tableView(_:numberOfRowsInSection:):SearchViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = " modelController.viewModel[0].abbreviationArray?.count">
+            </PersistentString>
+            <PersistentString
+               value = "modelController.viewModel.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DetailViewController.viewDidLoad():DetailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "resultViewModel?.word">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

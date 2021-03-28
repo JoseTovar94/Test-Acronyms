@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailTableViewCell" rowHeight="123" id="rcA-E7-u8X" customClass="DetailTableViewCell" customModule="Acronyms" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="453" height="123"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rcA-E7-u8X" id="sdR-T6-n6D">
+                <rect key="frame" x="0.0" y="0.0" width="453" height="123"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NW6-i5-Vm0">
+                        <rect key="frame" x="10" y="10" width="433" height="103"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Poc-5o-1Z7">
+                                <rect key="frame" x="20" y="15" width="393" height="23"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <color key="textColor" name="acronymsTextOnSurface"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frequency:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4N-eZ-C3M">
+                                <rect key="frame" x="20" y="48" width="85.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <color key="textColor" name="acronymsTextOnSurface"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Since:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yuc-4N-Law">
+                                <rect key="frame" x="366" y="48" width="47" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <color key="textColor" name="acronymsTextOnSurface"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frequency:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REq-b3-AjD">
+                                <rect key="frame" x="26.5" y="74.5" width="72.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" name="acronymsSecondary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Since:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3J-9e-hEE">
+                                <rect key="frame" x="366" y="74.5" width="47" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" name="acronymsSecondary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="REq-b3-AjD" secondAttribute="bottom" constant="11.5" id="6W2-Df-xEd"/>
+                            <constraint firstItem="Poc-5o-1Z7" firstAttribute="leading" secondItem="NW6-i5-Vm0" secondAttribute="leading" constant="20" id="IBQ-qC-Ile"/>
+                            <constraint firstItem="k4N-eZ-C3M" firstAttribute="top" secondItem="Poc-5o-1Z7" secondAttribute="bottom" constant="10" id="URv-hn-NVL"/>
+                            <constraint firstItem="Poc-5o-1Z7" firstAttribute="top" secondItem="NW6-i5-Vm0" secondAttribute="top" constant="15" id="fNh-DL-ZPY"/>
+                            <constraint firstItem="n3J-9e-hEE" firstAttribute="centerX" secondItem="Yuc-4N-Law" secondAttribute="centerX" id="fTT-5G-xHj"/>
+                            <constraint firstAttribute="trailing" secondItem="Poc-5o-1Z7" secondAttribute="trailing" constant="20" id="gIg-lE-a49"/>
+                            <constraint firstItem="Yuc-4N-Law" firstAttribute="top" secondItem="Poc-5o-1Z7" secondAttribute="bottom" constant="10" id="gyz-MW-j1N"/>
+                            <constraint firstItem="REq-b3-AjD" firstAttribute="top" secondItem="k4N-eZ-C3M" secondAttribute="bottom" constant="7" id="kIq-r1-yZ5"/>
+                            <constraint firstItem="n3J-9e-hEE" firstAttribute="trailing" secondItem="Poc-5o-1Z7" secondAttribute="trailing" id="nGB-XL-yKG"/>
+                            <constraint firstItem="n3J-9e-hEE" firstAttribute="top" secondItem="Yuc-4N-Law" secondAttribute="bottom" constant="7" id="s2R-SO-u43"/>
+                            <constraint firstItem="k4N-eZ-C3M" firstAttribute="leading" secondItem="Poc-5o-1Z7" secondAttribute="leading" id="tmo-nQ-iJf"/>
+                            <constraint firstItem="Yuc-4N-Law" firstAttribute="trailing" secondItem="Poc-5o-1Z7" secondAttribute="trailing" id="vU8-zQ-lIA"/>
+                            <constraint firstItem="REq-b3-AjD" firstAttribute="centerX" secondItem="k4N-eZ-C3M" secondAttribute="centerX" id="y3B-eH-9FJ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="NW6-i5-Vm0" firstAttribute="leading" secondItem="sdR-T6-n6D" secondAttribute="leading" constant="10" id="AT6-mP-wXF"/>
+                    <constraint firstItem="NW6-i5-Vm0" firstAttribute="top" secondItem="sdR-T6-n6D" secondAttribute="top" constant="10" id="KEP-7x-ZxO"/>
+                    <constraint firstAttribute="bottom" secondItem="NW6-i5-Vm0" secondAttribute="bottom" constant="10" id="Rc9-EH-QkS"/>
+                    <constraint firstAttribute="trailing" secondItem="NW6-i5-Vm0" secondAttribute="trailing" constant="10" id="rXb-fA-ilb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="Dbr-v9-3W2"/>
+            <connections>
+                <outlet property="frequencyLabel" destination="REq-b3-AjD" id="aVT-3d-6y2"/>
+                <outlet property="sinceLabel" destination="n3J-9e-hEE" id="Ogd-tK-of6"/>
+                <outlet property="titleLabel" destination="Poc-5o-1Z7" id="SnX-gV-chB"/>
+                <outlet property="viewContainer" destination="NW6-i5-Vm0" id="DxL-gZ-DpA"/>
+            </connections>
+            <point key="canvasLocation" x="234.05797101449278" y="179.12946428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="acronymsSecondary">
+            <color red="0.011764705882352941" green="0.85490196078431369" blue="0.77647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="acronymsTextOnSurface">
+            <color red="0.0" green="0.23137254901960785" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
