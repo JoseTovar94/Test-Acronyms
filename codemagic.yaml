@@ -1,0 +1,20 @@
+workflows:
+    release-ios-workflow:
+    name: Release Prueba iOS Workflow
+    instance_type: mac_mini
+    environment:
+      vars:
+        XCODE_WORKSPACE: "YOUR_WORKSPACE_NAME.xcworkspace"  # PUT YOUR WORKSPACE NAME HERE
+        XCODE_SCHEME: "YOUR_SCHEME_NAME" # PUT THE NAME OF YOUR SCHEME HERE
+        FCI_CERTIFICATE: Encrypted(...) # PUT THE ENCRYPTED DISTRIBUTION CERTIFICATE HERE
+        FCI_CERTIFICATE_PASSWORD: Encrypted(...) # PUT THE ENCRYPTED CERTIFICATE PASSWORD HERE
+        FCI_PROVISIONING_PROFILE: Encrypted(...) # PUT THE ENCRYPTED PROVISIONING PROFILE HERE
+      xcode: latest
+      cocoapods: default
+    triggering:
+      branch_patterns:
+        - pattern: 'main'
+          include: true
+          source: true
+    artifacts:
+      - build/ios/ipa/*.ipa
